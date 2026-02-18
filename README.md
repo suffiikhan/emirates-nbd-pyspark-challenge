@@ -1,7 +1,7 @@
 #NYC Jobs Data Engineering Challenge
 
 ---------------------------------------------------
-1. ##Overview:
+##1. Overview:
 
 - This solution implements a scalable PySpark-based data processing pipeline to analyze NYC job postings and derive the required KPIs.
 - The design focuses on:
@@ -13,7 +13,7 @@
   - Production-readiness
 
 ---------------------------------------------------
-2. ##Assumptions:
+##2. Assumptions:
 
 1) Salary Normalization:
 - The dataset contains mixed salary frequency values (Annual, Hourly, Daily).
@@ -47,7 +47,7 @@
   - This ensures reproducibility even if dataset is historical.
 
 ---------------------------------------------------
-3. ##Data Processing:
+##3. Data Processing:
 
 - The preprocessing function performs:
   - Salary normalization to annual scale
@@ -62,7 +62,7 @@
 - Processed data is written in Parquet format and partitioned by posting_year.
 
 ---------------------------------------------------
-4. ##Feature Engineering Applied:
+##4. Feature Engineering Applied:
 
 - Salary normalization
 - Mid salary derivation
@@ -71,7 +71,7 @@
 - Posting year extraction
 
 ---------------------------------------------------
-5. ##KPIs Implemented:
+##5. KPIs Implemented:
 
 - Top 10 job categories by number of postings
 - Salary distribution per job category
@@ -81,7 +81,7 @@
 - Highest paid skill combinations
 
 ---------------------------------------------------
-6. ##Data Quality Checks:
+##6. Data Quality Checks:
 
 - Record count validation
 - Salary null checks
@@ -91,7 +91,7 @@
 - Assertions to ensure salary consistency
 
 ---------------------------------------------------
-7. ##Performance Optimizations:
+##7. Performance Optimizations:
 
 - DataFrame caching
 - Efficient window function usage
@@ -100,14 +100,14 @@
 - Restart and Run All validation to ensure deterministic execution
 
 ---------------------------------------------------
-8. ##Challenges:
+##8. Challenges:
 
 - Column name sanitization required before Parquet write
 - Mixed salary frequency required careful normalization
 - Dataset limited to NYC and does not represent the full US job market
 
 ---------------------------------------------------
-9. ##Proposed Production Deployment:
+##9. Proposed Production Deployment:
 
 - Orchestration using Apache Airflow
 - Raw data stored in Data Lake (S3 or ADLS)
@@ -117,9 +117,10 @@
 - CI/CD using GitHub with automated validation tests
 
 ---------------------------------------------------
-10. ##Conclusion:
+##10. Conclusion:
 
 - This solution provides a clean modular PySpark implementation with reproducible KPI generation, data validation mechanisms, performance optimizations, and production-oriented design.
 - The notebook executes successfully after full restart and all KPIs are reproducible.
 
 ---------------------------------------------------
+
